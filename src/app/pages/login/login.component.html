@@ -1,0 +1,41 @@
+<div class="container-fluid vh-100">
+    <div class="row" style="height: inherit;">
+      <div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-start px-4" id="bg">
+        <span class="text-white display-4 m-0 mb-1">Drive Your Way</span>
+        <span class="m-0 display-5 text-white">Admin Dashboard</span>
+  
+        <ul class="list-group mt-5 text-white" style="list-style-type: none; margin: 0; padding: 0;">
+          <li><span class="text-sm">Manage Dynamic Content For Your WebSite</span></li>
+          <li><span class="text-sm">An Optimal, Reliable and Dynamic Web Backend</span></li>
+          <li><span class="text-sm">Modern Secure Interface based on Amazon Web Services</span></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 d-flex flex-column justify-content-center align-items-center">
+        <div class="card w-75 shadow-sm">
+          <div class="card-header bg-white border-0 text-center">
+            <span style="font-size: 1.5rem; font-weight: 500;" class="m-0">Login</span>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+              <div class="form-group col-12 mt-2">
+                <label for="email" class="text-sm">Email</label>
+                <input class="form-control" placeholder="eg: abc@example.com" formControlName="email" name="email"
+                  type="email" required>
+              </div>
+              <div class="form-group col-12 mt-2">
+                <label for="password" class="text-sm">Password</label>
+                <input class="form-control" placeholder="********" formControlName="password" name="password"
+                  type="password" required>
+              </div>
+    
+              <p class="alert alert-danger text-center h6 mt-2" *ngIf="errorMsg !== undefined">
+                {{ errorMsg }}
+              </p>
+    
+              <button type="submit" class="btn btn-success rounded col-12 mt-4">Submit</button> 
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
